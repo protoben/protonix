@@ -22,7 +22,7 @@ rustPlatform.buildRustPackage rec {
     description = "An evaluation context for Rust, including a CLI REPL and a Jupyter kernel";
     homepage = "https://github.com/google/evcxr";
     license = stdenv.lib.licenses.asl20;
-    maintainers = [ stdenv.lib.maintainers.protoben ];
+    #maintainers = [ stdenv.lib.maintainers.protoben ];
     platforms = stdenv.lib.platforms.all;
   };
 }
