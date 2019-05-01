@@ -3,7 +3,7 @@
 
 let callPackage = pkgs.lib.callPackageWith pkgs;
 
-rec {
+in rec {
 
   evcxr = callPackage ./pkgs/evcxr {};
 
