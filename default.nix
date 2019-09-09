@@ -1,10 +1,13 @@
 { pkgs ? import <nixpkgs> {}
 }:
 
-let callPackage = pkgs.lib.callPackageWith pkgs;
+let
+  callPackage = pkgs.lib.callPackageWith pkgs;
+  environments = import ./env { inherit pkgs protopkgs; };
+  protopkgs = rec {
 
-in rec {
+    protovim = callPackage ./pkgs/protovim {};
 
-  evcxr = callPackage ./pkgs/evcxr {};
+  };
 
-}
+in environments // protopkgs
