@@ -57,7 +57,7 @@ rec {
 
   rust-dev = pkgs.buildEnv {
     name = "rust-dev";
-    paths = (with pkgs; [
+    paths = with pkgs; [
       rustup
       evcxr
     ];
