@@ -20,6 +20,8 @@ let
 
   vim_configured = vim_configurable.customize {
     name = "vim";
+    darwinSupport = true;
+    guiSupport = false;
     vimrcConfig = {
       customRC = ''
         """ Base Config
