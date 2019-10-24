@@ -172,14 +172,14 @@ let
 
         let mapleader=" "
 
-        noremap  <silent> <Leader>j <C-W>j
-        noremap  <silent> <Leader>k <C-W>k
-        noremap  <silent> <Leader>l <C-W>l
-        noremap  <silent> <Leader>; <C-W>;
-        noremap  <silent> <Leader>J <C-W>J
-        noremap  <silent> <Leader>K <C-W>K
-        noremap  <silent> <Leader>L <C-W>L
-        noremap  <silent> <Leader>: <C-W>:
+        noremap  <silent> <Leader>j <C-W>h
+        noremap  <silent> <Leader>k <C-W>j
+        noremap  <silent> <Leader>l <C-W>k
+        noremap  <silent> <Leader>; <C-W>l
+        noremap  <silent> <Leader>J <C-W>H
+        noremap  <silent> <Leader>K <C-W>J
+        noremap  <silent> <Leader>L <C-W>K
+        noremap  <silent> <Leader>: <C-W>L
         
         noremap  <silent> <Leader>y gT
         noremap  <silent> <Leader>u gt
@@ -212,6 +212,10 @@ let
         nnoremap <silent> k          j
         nnoremap <silent> l          k
         nnoremap <silent> ;          l
+        vnoremap <silent> j          h
+        vnoremap <silent> k          j
+        vnoremap <silent> l          k
+        vnoremap <silent> ;          l
       '';
 
       vam = {
