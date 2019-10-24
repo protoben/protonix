@@ -252,6 +252,15 @@ let
               sha256 = "03a16ysy7fy8if6kwkgf2w4ja97bqmg3yk7h1jlssz37b385hl2d";
             };
           };
+          cryptol = vimUtils.buildVimPlugin {
+            name = "cryptol";
+            src = fetchFromGitHub {
+              owner = "victoredwardocallaghan";
+              repo = "cryptol.vim";
+              rev = "15040e77c8256c9d7a8824fd95804836121ed46a";
+              sha256 = "0iv8s2z7xap4mj2ad3dq67h629j2bn8zvch32azn3l0q4cppmnw8";
+            };
+          };
         };
 
         pluginDictionaries = [
@@ -263,6 +272,7 @@ let
           { names = [ "vim-signify" "fugitive" ]; }
           { names = [ "vim-addon-nix" "vim-nix" ]; ft_regex = "^nix\$"; }
           { names = [ "vim-haskellFold" "vim-hoogle" "haskell-vim" ]; ft_regex = "^haskell\$"; }
+          { names = [ "cryptol" ]; }
           { names = [ "Tagbar" ]; ft_regex = "^\\(haskell\\|c\\|cpp\\|markdown\\|make\\)\$"; }
         ];
       };
