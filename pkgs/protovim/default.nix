@@ -208,14 +208,10 @@ let
         vnoremap <silent> HH         :exe "Hoogle " . expand("<cword>")<CR>
         vnoremap <silent> HI         :exe "HoogleInfo " . expand("<cword>")<CR>
         noremap  <silent> <Leader>hc :HoogleClose<CR>
-        nnoremap <silent> j          h
-        nnoremap <silent> k          j
-        nnoremap <silent> l          k
-        nnoremap <silent> ;          l
-        vnoremap <silent> j          h
-        vnoremap <silent> k          j
-        vnoremap <silent> l          k
-        vnoremap <silent> ;          l
+        noremap  <silent> j          h
+        noremap  <silent> k          j
+        noremap  <silent> l          k
+        noremap  <silent> ;          l
       '';
 
       vam = {
