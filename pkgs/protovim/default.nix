@@ -42,6 +42,10 @@ let
         autocmd BufNewFile,BufRead *.hs,*.hsc,*.lhs edit %
         autocmd BufNewFile,BufRead *.hs,*.hsc,*.lhs setlocal filetype=haskell
 
+        " Also janky. Should find a better way to do this. Enable .aadl
+        " extension.
+        autocmd BufNewFile,BufRead *.aadl,*.aaxl setlocal filetype=aadl
+
         """ Airline config
         """"""""""""""""""
 
@@ -261,6 +265,15 @@ let
               sha256 = "0iv8s2z7xap4mj2ad3dq67h629j2bn8zvch32azn3l0q4cppmnw8";
             };
           };
+          aadl-syntax = vimUtils.buildVimPlugin {
+            name = "aadl-syntax";
+            src = fetchFromGitHub {
+              owner = "OpenAADL";
+              repo = "AADLib";
+              rev = "v2017.1";
+              sha256 = "15gicvdpvmgbzzgld037z35g373r4l6l8kpzfmavd5bl3rlq9z7s";
+            };
+          };
         };
 
         pluginDictionaries = [
@@ -274,6 +287,7 @@ let
           { names = [ "vim-haskellFold" "vim-hoogle" "haskell-vim" ]; ft_regex = "^haskell\$"; }
           { names = [ "cryptol" ]; }
           { names = [ "Tagbar" ]; ft_regex = "^\\(haskell\\|c\\|cpp\\|markdown\\|make\\)\$"; }
+          { names = [ "aadl-syntax" ]; ft_regex = "^aadl$"; }
         ];
       };
     };
