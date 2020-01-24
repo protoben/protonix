@@ -8,6 +8,8 @@ let
 
     protovim = callPackage ./pkgs/protovim {};
 
+    ocarina-bin = callPackage ./pkgs/ocarina/bin.nix {};
+
   };
 
 in environments // protopkgs
