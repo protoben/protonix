@@ -14,7 +14,9 @@ in stdenvNoCC.mkDerivation rec {
   src = fetchurl {
     url = "https://github.com/OpenAADL/ocarina/releases/download/v2017.1/" +
           "ocarina-2017.1-suite-${platform}-x86_64-20170204.tgz";
-    sha256 = "0kznps0qjfjsbaqr6ap797y85dljpj632kanyjxk114irbysqglz";
+    sha256 = if stdenvNoCC.hostPlatform.isDarwin
+          then "0kznps0qjfjsbaqr6ap797y85dljpj632kanyjxk114irbysqglz"
+          else "15ffv4k8pm3dimag7i737zmdf7idkg2pi7himbbbasknijhm516j";
   };
 
   installPhase = ''
