@@ -267,6 +267,7 @@ let
           };
           aadl-syntax = vimUtils.buildVimPlugin {
             name = "aadl-syntax";
+            preInstall = "cd share/vim";
             src = fetchFromGitHub {
               owner = "OpenAADL";
               repo = "AADLib";
