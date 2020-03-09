@@ -216,6 +216,11 @@ let
         noremap  <silent> k          j
         noremap  <silent> l          k
         noremap  <silent> ;          l
+
+        " Some dork seems to have imapped <Leader>aj and <Leader>al in the
+        " Ada ftplugin. Remove these.
+        autocmd BufNewFile,BufRead *.adb,*.ads,*gpr iunmap <buffer> <Leader>aj
+        autocmd BufNewFile,BufRead *.adb,*.ads,*gpr iunmap <buffer> <Leader>al
       '';
 
       vam = {
