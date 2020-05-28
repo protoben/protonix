@@ -294,6 +294,7 @@ let
           { names = [ "cryptol" ]; }
           { names = [ "Tagbar" ]; ft_regex = "^\\(haskell\\|c\\|cpp\\|markdown\\|make\\)\$"; }
           { names = [ "aadl-syntax" ]; ft_regex = "^aadl$"; }
+          { names = [ "rust-vim" ]; ft_regex = "^rs$"; }
         ];
       };
     };
