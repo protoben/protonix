@@ -177,6 +177,14 @@ let
 
         let g:rust_fold = 1
 
+        """ Syntastic
+        """""""""""""
+
+        let g:syntastic_auto_loc_list            = 1
+        let g:syntastic_always_populate_loc_list = 1
+        let g:syntastic_check_on_open            = 1
+        let g:syntastic_check_on_wq              = 0
+
         """ Keymaps
         """""""""""
 
@@ -223,6 +231,10 @@ let
         vnoremap <silent> <Leader>rf :RustFmt<CR>
         noremap  <silent> <Leader>rt :RustTest<CR>
         noremap  <silent> <Leader>rT :RustTest!<CR>
+        noremap  <silent> <Leader>rc :Crun<CR>
+        noremap  <silent> <Leader>rC :Cargo +nightly run<CR>
+        noremap  <silent> <Leader>rb :Cbuild<CR>
+        noremap  <silent> <Leader>ss :Errors<CR>
         noremap  <silent> j          h
         noremap  <silent> k          j
         noremap  <silent> l          k
