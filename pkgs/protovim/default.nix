@@ -172,6 +172,11 @@ let
         let g:haskell_indent_guard            = 4
         let g:cabal_indent_section            = 4
 
+        """ Rust-vim
+        """"""""""""
+
+        let g:rust_fold = 1
+
         """ Keymaps
         """""""""""
 
@@ -216,6 +221,8 @@ let
         noremap  <silent> <Leader>rr :RustRun<CR>
         nnoremap <silent> <Leader>rf :RustFmt<CR>
         vnoremap <silent> <Leader>rf :RustFmt<CR>
+        noremap  <silent> <Leader>rt :RustTest<CR>
+        noremap  <silent> <Leader>rT :RustTest!<CR>
         noremap  <silent> j          h
         noremap  <silent> k          j
         noremap  <silent> l          k
