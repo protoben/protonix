@@ -315,7 +315,7 @@ let
               owner = "prabirshrestha";
               repo = "vim-lsp";
               rev = "848c5257293644c2bab7a0c39a533ab656651b9d";
-              sha256 = "0i3ymdrj8dvdl3j5kmw9fv82i1wlph87rw2grzywxnyk1lc7r1x8";
+              sha256 = "0000000000000000000000000000000000000000000000000001";
             };
           };
           asyncomplete-vim = vimUtils.buildVimPlugin {
@@ -324,7 +324,7 @@ let
               owner = "prabirshrestha";
               repo = "asyncomplete.vim";
               rev = "75f25b059f4fd6d5b560a4b1ce78ccd0b760b632";
-              sha256 = "0hvnlfyal387psmlkr7bi1p87hxiqpdnp987b897mnlc1kdv2ipw";
+              sha256 = "0000000000000000000000000000000000000000000000000002";
             };
           };
           asyncomplete-lsp-vim = vimUtils.buildVimPlugin {
