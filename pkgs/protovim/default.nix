@@ -172,22 +172,6 @@ let
         let g:haskell_indent_guard            = 4
         let g:cabal_indent_section            = 4
 
-        """ Asyncomplete config
-        """""""""""""""""""""""
-
-        let g:asyncomplete_auto_popup = 0
-
-        """ Rust-vim config
-        """""""""""""""""""
-
-        if executable('rls')
-          au User lsp_setup call lsp#register_server({
-            \ 'name': 'rls',
-            \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
-            \ 'whitelist': ['rust'],
-          \ })
-        endif
-
         """ Keymaps
         """""""""""
 
@@ -300,42 +284,6 @@ let
               sha256 = "15gicvdpvmgbzzgld037z35g373r4l6l8kpzfmavd5bl3rlq9z7s";
             };
           };
-          async-vim = vimUtils.buildVimPlugin {
-            name = "async-vim";
-            src = fetchFromGitHub {
-              owner = "prabirshrestha";
-              repo = "async.vim";
-              rev = "42371b5fb2cc07254295ff6beb3ca7cf235b7ede";
-              sha256 = "0000000000000000000000000000000000000000000000000000";
-            };
-          };
-          vim-lsp = vimUtils.buildVimPlugin {
-            name = "vim-lsp";
-            src = fetchFromGitHub {
-              owner = "prabirshrestha";
-              repo = "vim-lsp";
-              rev = "848c5257293644c2bab7a0c39a533ab656651b9d";
-              sha256 = "0000000000000000000000000000000000000000000000000000";
-            };
-          };
-          asyncomplete-vim = vimUtils.buildVimPlugin {
-            name = "asyncomplete-vim";
-            src = fetchFromGitHub {
-              owner = "prabirshrestha";
-              repo = "asyncomplete.vim";
-              rev = "75f25b059f4fd6d5b560a4b1ce78ccd0b760b632";
-              sha256 = "0000000000000000000000000000000000000000000000000000";
-            };
-          };
-          asyncomplete-lsp-vim = vimUtils.buildVimPlugin {
-            name = "asyncomplete-lsp-vim";
-            src = fetchFromGitHub {
-              owner = "prabirshrestha";
-              repo = "asyncomplete-lsp.vim";
-              rev = "0357e956fa143b3824c6a032c5b6c9b7ef744c23";
-              sha256 = "0000000000000000000000000000000000000000000000000000";
-            };
-          };
         };
 
         pluginDictionaries = [
@@ -350,7 +298,7 @@ let
           { names = [ "cryptol" ]; }
           { names = [ "Tagbar" ]; ft_regex = "^\\(haskell\\|c\\|cpp\\|markdown\\|make\\|rust\\)\$"; }
           { names = [ "aadl-syntax" ]; ft_regex = "^aadl$"; }
-          { names = [ "rust-vim" "async-vim" "vim-lsp" "asyncomplete-vim" "asyncomplete-lsp-vim" ]; ft_regex = "^rust$"; }
+          { names = [ "rust-vim" ]; ft_regex = "^rust$"; }
         ];
       };
     };
