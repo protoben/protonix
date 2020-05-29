@@ -1,6 +1,6 @@
 { runCommand, vim_configurable, vimPlugins, vimUtils, fetchFromGitHub
 , buildEnv, w3m, git, haskellPackages, universal-ctags, man-pages
-, rustup, rustc
+, rustup, rustc, cargo, rls, rustfmt
 }:
 
 let
@@ -298,7 +298,7 @@ let
           { names = [ "cryptol" ]; }
           { names = [ "Tagbar" ]; ft_regex = "^\\(haskell\\|c\\|cpp\\|markdown\\|make\\|rust\\)\$"; }
           { names = [ "aadl-syntax" ]; ft_regex = "^aadl$"; }
-          { names = [ "rust-vim" "webapi-vim" ]; ft_regex = "^rust$"; }
+          { names = [ "rust-vim" ]; ft_regex = "^rust$"; }
         ];
       };
     };
