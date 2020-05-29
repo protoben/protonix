@@ -305,7 +305,7 @@ let
           { names = [ "cryptol" ]; }
           { names = [ "Tagbar" ]; ft_regex = "^\\(haskell\\|c\\|cpp\\|markdown\\|make\\|rust\\)\$"; }
           { names = [ "aadl-syntax" ]; ft_regex = "^aadl$"; }
-          { names = [ "rust-vim" ]; ft_regex = "^rust$"; }
+          { names = [ "rust-vim" "syntastic" ]; ft_regex = "^rust$"; }
         ];
       };
     };
