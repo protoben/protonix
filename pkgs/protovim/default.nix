@@ -1,5 +1,6 @@
 { runCommand, vim_configurable, vimPlugins, vimUtils, fetchFromGitHub
 , buildEnv, w3m, git, haskellPackages, universal-ctags, man-pages
+, rustup, rustc
 }:
 
 let
@@ -212,6 +213,9 @@ let
         vnoremap <silent> HH         :exe "Hoogle " . expand("<cword>")<CR>
         vnoremap <silent> HI         :exe "HoogleInfo " . expand("<cword>")<CR>
         noremap  <silent> <Leader>hc :HoogleClose<CR>
+        noremap  <silent> <Leader>rr :RustRun<CR>
+        nnoremap <silent> <Leader>rf :RustFmt<CR>
+        vnoremap <silent> <Leader>rf :RustFmt<CR>
         noremap  <silent> j          h
         noremap  <silent> k          j
         noremap  <silent> l          k
@@ -292,9 +296,9 @@ let
           { names = [ "vim-addon-nix" "vim-nix" ]; ft_regex = "^nix\$"; }
           { names = [ "vim-haskellFold" "vim-hoogle" "haskell-vim" ]; ft_regex = "^haskell\$"; }
           { names = [ "cryptol" ]; }
-          { names = [ "Tagbar" ]; ft_regex = "^\\(haskell\\|c\\|cpp\\|markdown\\|make\\)\$"; }
+          { names = [ "Tagbar" ]; ft_regex = "^\\(haskell\\|c\\|cpp\\|markdown\\|make\\|rust\\)\$"; }
           { names = [ "aadl-syntax" ]; ft_regex = "^aadl$"; }
-          { names = [ "rust-vim" ]; ft_regex = "^rs$"; }
+          { names = [ "rust-vim" "webapi-vim" ]; ft_regex = "^rust$"; }
         ];
       };
     };
