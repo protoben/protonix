@@ -333,7 +333,7 @@ let
               owner = "prabirshrestha";
               repo = "asyncomplete-lsp.vim";
               rev = "0357e956fa143b3824c6a032c5b6c9b7ef744c23";
-              sha256 = "10cccsfp435is42q0n2bbpccl2lppda2adjv4i7z3hkjk55azr6j";
+              sha256 = "0000000000000000000000000000000000000000000000000003";
             };
           };
         };
