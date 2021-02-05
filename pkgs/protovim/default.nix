@@ -176,6 +176,7 @@ let
         """"""""""""
 
         let g:rust_fold = 1
+        let g:rust_cargo_check_tests = 1
 
         """ Syntastic
         """""""""""""
@@ -184,6 +185,7 @@ let
         let g:syntastic_always_populate_loc_list = 1
         let g:syntastic_check_on_open            = 1
         let g:syntastic_check_on_wq              = 0
+        let g:syntastic_enable_highlighting      = 0
 
         """ Keymaps
         """""""""""
@@ -226,13 +228,12 @@ let
         vnoremap <silent> HH         :exe "Hoogle " . expand("<cword>")<CR>
         vnoremap <silent> HI         :exe "HoogleInfo " . expand("<cword>")<CR>
         noremap  <silent> <Leader>hc :HoogleClose<CR>
-        noremap  <silent> <Leader>rr :RustRun<CR>
+        noremap  <silent> <Leader>rr :Crun<CR>
+        noremap  <silent> <Leader>rR :RustRun<CR>
         nnoremap <silent> <Leader>rf :RustFmt<CR>
         vnoremap <silent> <Leader>rf :RustFmt<CR>
         noremap  <silent> <Leader>rt :RustTest<CR>
         noremap  <silent> <Leader>rT :RustTest!<CR>
-        noremap  <silent> <Leader>rc :Crun<CR>
-        noremap  <silent> <Leader>rC :Cargo +nightly run<CR>
         noremap  <silent> <Leader>rb :Cbuild<CR>
         noremap  <silent> <Leader>ss :Errors<CR>
         noremap  <silent> j          h
